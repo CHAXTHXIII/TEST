@@ -1,0 +1,53 @@
+
+{
+  "info": {
+    "name": "Movie Catalog API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Collection for testing Movie Catalog API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Movie",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/movies/add?title=Inception&director=Nolan&releaseYear=2010",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["movies","add"],
+          "query":[
+            {"key":"title","value":"Inception"},
+            {"key":"director","value":"Nolan"},
+            {"key":"releaseYear","value":"2010"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Movies",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {"raw": "http://localhost:8080/movies", "protocol":"http", "host":["localhost"], "port":"8080", "path":["movies"]}
+      }
+    },
+    {
+      "name": "Search Movie",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/movies/search?title=Inception",
+          "protocol":"http",
+          "host":["localhost"],
+          "port":"8080",
+          "path":["movies","search"],
+          "query":[{"key":"title","value":"Inception"}]
+        }
+      }
+    }
+  ]
+}
